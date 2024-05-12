@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "ClearCookie",
+    "description": "Automatically and manually clear website cache",
+    "version": "1.0",
+    "host_permissions": [
+        "<all_urls>"
+      ],
+    "permissions": ["alarms", "storage", "browsingData", "cookies","activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "icon16.png"
+    }
+  }

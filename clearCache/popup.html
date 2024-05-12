@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClearCookie</title>
+  <style>
+    body {
+      padding: 16px;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #websiteForm {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    #scheduledList {
+      list-style-type: none;
+      padding: 0;
+    }
+    .scheduled-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="websiteForm">
+    <input type="url" id="website" placeholder="Enter website URL for instant clear" style="flex-grow: 1;">
+    <button id="clearNow">Clear Now</button>
+  </div>
+  <div id="websiteForm">
+    <input type="url" id="scheduledWebsite" placeholder="Enter website URL for scheduling" style="flex-grow: 2;">
+    <input type="time" id="scheduleTime">
+    <select id="scheduleRepeat">
+      <option value="none">Does not repeat</option>
+      <option value="day">Every day</option>
+      <option value="week">Every week</option>
+    </select>
+    <button id="addToSchedule">Add to Schedule</button>
+  </div>
+  <ul id="scheduledList"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
